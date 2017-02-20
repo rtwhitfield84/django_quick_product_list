@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="" action="{% url 'qpl:login' %}" method="post">
+	{% csrf_token %}
+	<input type="text" name="username" value="" placeholder="Enter Username">
+	<input type="text" name="username" value="" placeholder="Enter Password">
+	<button type="submit">Login</button>
+</form>
+<p>Not a user? Register<a href="{% url 'qpl:register' %}"> here!</a></p>
+{% endblock %}
