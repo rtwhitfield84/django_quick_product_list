@@ -2,7 +2,9 @@
 
 {% block content %}
 {% for product in products $}
-	<li>{{product}}</li>
+	<ul>
+		<li>{{ product.name }}</li>
+	</ul>
 {% endfor %}
 <form class="" action="{% url 'qpl:products' %}" method="post">
 	{% csrf_token %}
