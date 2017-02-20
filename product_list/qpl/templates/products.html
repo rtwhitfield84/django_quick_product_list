@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1>Look! Products</h1>
 	{% for product in products %}
 		<ul>
-			<li>{{ product.name }}</li>
+			<li style="list-style: none;">{{ forloop.counter }}: {{ product.name }}</li>
 		</ul>
 	{% endfor %}
 

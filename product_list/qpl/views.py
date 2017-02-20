@@ -7,6 +7,7 @@ from . models import Product
 
 class ProductsView(View):
 	template_name = 'products.html'
+	i = 1
 
 	def get(self, request):
 		self.products = Product.objects.all()
