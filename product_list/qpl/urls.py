@@ -4,9 +4,6 @@ from qpl import views
 app_name = 'qpl'
 
 urlpatterns = [
-	# url(r'^$', views.BaseView.as_view(), name='base'),
 	url(r'^$', views.ProductsView.as_view(), name='products'),
 	url(r'^product_added', views.ProductAddedView.as_view(), name='product_added'),
-	# url(r'^product', views, name='add_product'),
-	# url(r'^admin/', admin.site.urls),
 ]
