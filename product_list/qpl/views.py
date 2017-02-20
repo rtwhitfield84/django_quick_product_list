@@ -4,5 +4,5 @@ from django .http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
-# class IndexView(TemplateView):
-# 	template_name = 'qpl/'
+class BaseView(TemplateView):
+	template_name = 'qpl/base.html'
