@@ -1,11 +1,12 @@
-{% extends 'qpl/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-{% for product in products $}
-	<ul>
-		<li>{{ product.name }}</li>
-	</ul>
-{% endfor %}
+	{% for product in products %}
+		<ul>
+			<li>{{ product.name }}</li>
+		</ul>
+	{% endfor %}
+
 <form class="" action="{% url 'qpl:products' %}" method="post">
 	{% csrf_token %}
 	<input type="text" name="name" value="" placeholder="name">
@@ -14,3 +15,4 @@
 	<button type="submit">ADD PRODUCT</button>
 </form>
 {% endblock %}
+
